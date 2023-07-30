@@ -59,7 +59,7 @@ class HomeController extends State<HomeView> {
       'detail':
           'Chicken Dimsum Recipe is the delicious evening snack during the winters and monsoon',
       'image':
-          "https://themes.semicolonweb.com/html/canvas/v5/demos/recipes/images/popular/12.png"
+          "https://github.com/zihunn/slicing-ui-food/blob/main/assets/dumpling.png"
     },
     {
       'id': 3,
@@ -77,42 +77,4 @@ class HomeController extends State<HomeView> {
   ];
 }
 
-// Stack(
-//                               children: [
-//                                 Positioned(
-//                                   left: 0,
-//                                   right: 0,
-//                                   top: 30,
-//                                   child: Container(
-//                                     width: MediaQuery.of(context).size.width,
-//                                     height: 300,
-//                                     decoration: BoxDecoration(
-//                                       image: DecorationImage(
-//                                           fit: BoxFit.cover,
-//                                           image: NetworkImage(imageUrl)),
-//                                       color: Colors.blue,
-//                                       borderRadius: BorderRadius.all(
-//                                         Radius.circular(
-//                                           20.0,
-//                                         ),
-//                                       ),
-//                                     ),
-//                                   ),
-//                                 ),
-//                                 Positioned(
-//                                   top: 0,
-//                                   child: Container(
-//                                     height: 50.0,
-//                                     width: 50,
-//                                     decoration: const BoxDecoration(
-//                                       color: Colors.blue,
-//                                       borderRadius: BorderRadius.all(
-//                                         Radius.circular(
-//                                           16.0,
-//                                         ),
-//                                       ),
-//                                     ),
-//                                   ),
-//                                 )
-//                               ],
-//                             );
+
