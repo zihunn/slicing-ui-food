@@ -1,9 +1,7 @@
 import 'package:card_swiper/card_swiper.dart';
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:food_ui/core.dart';
 import 'package:food_ui/state_util.dart';
-import 'package:simple_shadow/simple_shadow.dart';
 import '../controller/Home_controller.dart';
 
 class HomeView extends StatefulWidget {
@@ -317,112 +315,104 @@ class HomeView extends StatefulWidget {
                 itemCount: controller.ListFood.length,
                 itemBuilder: (context, index) {
                   var item = controller.ListFood[index];
-                  return Stack(children: [
-                    Positioned(
-                      child: Container(
-                        padding: EdgeInsets.only(bottom: 15),
-                        margin: EdgeInsets.only(
-                            left: 10, right: 10, top: 50, bottom: 20),
-                        height: 280,
-                        width: MediaQuery.of(context).size.width * 0.8,
-                        decoration: const BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(
-                              20.0,
+                  return InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, "/detail_view",
+                          arguments: {'item': item});
+                    },
+                    child: Stack(children: [
+                      Positioned(
+                        child: Container(
+                          padding: EdgeInsets.only(bottom: 15),
+                          margin: EdgeInsets.only(
+                              left: 10, right: 10, top: 50, bottom: 20),
+                          height: 280,
+                          width: MediaQuery.of(context).size.width * 0.8,
+                          decoration: const BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(
+                                20.0,
+                              ),
                             ),
                           ),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            Text(
-                              item['name'],
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              Text(
+                                item['name'],
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
-                            ),
-                            const SizedBox(
-                              height: 10.0,
-                            ),
-                            Text(
-                              item['category'],
-                              style: TextStyle(
-                                fontSize: 14.0,
-                                color: Colors.grey,
+                              const SizedBox(
+                                height: 10.0,
                               ),
-                            ),
-                            const SizedBox(
-                              height: 10.0,
-                            ),
-                            Text(
-                              "🔥 ${item['calories']} Calories",
-                              style: TextStyle(
-                                fontSize: 12.0,
-                                color: Colors.red,
+                              Text(
+                                item['category'],
+                                style: TextStyle(
+                                  fontSize: 14.0,
+                                  color: Colors.grey,
+                                ),
                               ),
-                            ),
-                            const SizedBox(
-                              height: 10.0,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  "\$",
-                                  style: const TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.amber,
+                              const SizedBox(
+                                height: 10.0,
+                              ),
+                              Text(
+                                "🔥 ${item['calories']} Calories",
+                                style: TextStyle(
+                                  fontSize: 12.0,
+                                  color: Colors.red,
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 10.0,
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "\$",
+                                    style: const TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.amber,
+                                    ),
                                   ),
-                                ),
-                                const SizedBox(
-                                  width: 2.0,
-                                ),
-                                Text(
-                                  "${item['price']}",
-                                  style: TextStyle(
-                                      fontSize: 24.0,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      top: -15,
-                      left: 8,
-                      child: Container(
-                        child: SimpleShadow(
-                          child: Image(
-                            width: 220.0,
-                            height: 220.0,
-                            image: NetworkImage(item['image']),
+                                  const SizedBox(
+                                    width: 2.0,
+                                  ),
+                                  Text(
+                                    "${item['price']}",
+                                    style: TextStyle(
+                                        fontSize: 24.0,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ],
+                              ),
+                            ],
                           ),
-                          opacity: 0.5, // Default: 0.5
-                          color: Color(0xffd7d7d7), // Default: Black
-                          offset: Offset(-20, 15), // Default: Offset(2, 2)
-                          sigma: 7, // Default: 2
                         ),
                       ),
-                      // child: Container(
-                      //   height: 220.0,
-                      //   width: 220.0,
-                      //   decoration: BoxDecoration(
-                      //       color: Colors.amber,
-                      //       borderRadius: BorderRadius.all(
-                      //         Radius.circular(
-                      //           16.0,
-                      //         ),
-                      //       ),
-                      //       image: DecorationImage(
-                      //           fit: BoxFit.cover,
-                      //           image: NetworkImage(item['image']))),
-                      // ),
-                    )
-                  ]);
+                      Positioned(
+                        top: -15,
+                        left: 16,
+                        child: Container(
+                          height: 210,
+                          width: 210,
+                          decoration: BoxDecoration(
+                              // color: Colors.amberAccent,
+                              ),
+                          child: Center(
+                            child: Image(
+                              fit: BoxFit.cover,
+                              image: AssetImage(item['image']),
+                            ),
+                          ),
+                        ),
+                      )
+                    ]),
+                  );
                 },
               ),
             ),

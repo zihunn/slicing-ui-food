@@ -15,6 +15,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(fontFamily: 'Jakarta'),
       title: 'Flutter Demo',
       home: HomeView(),
+      routes: {
+        '/detail_view': (context) => const DetailView(),
+        '/home': (context) => const HomeView(),
+      },
     );
   }
 }

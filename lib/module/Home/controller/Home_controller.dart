@@ -45,8 +45,13 @@ class HomeController extends State<HomeView> {
       'time': "20-30 min",
       'detail':
           'Egg Pasta Recipe is the delicious evening snack during the winters and monsoon',
-      'image':
-          "https://themes.semicolonweb.com/html/canvas/v5/demos/recipes/images/popular/12.png"
+      'image': "assets/eggpasta.png",
+      'ingredient': [
+        'assets/meat.png',
+        'assets/broccoli.png',
+        'assets/onion.png',
+        'assets/cabbage.png',
+      ]
     },
     {
       'id': 2,
@@ -58,8 +63,13 @@ class HomeController extends State<HomeView> {
       'time': "20-30 min",
       'detail':
           'Chicken Dimsum Recipe is the delicious evening snack during the winters and monsoon',
-      'image':
-          "https://github.com/zihunn/slicing-ui-food/blob/main/assets/dumpling.png"
+      'image': "assets/dumpling.png",
+      'ingredient': [
+        'assets/meat.png',
+        'assets/broccoli.png',
+        'assets/onion.png',
+        'assets/cabbage.png',
+      ]
     },
     {
       'id': 3,
@@ -71,8 +81,13 @@ class HomeController extends State<HomeView> {
       'time': "20-30 min",
       'detail':
           'Chicken Dimsum Recipe is the delicious evening snack during the winters and monsoon',
-      'image':
-          "https://themes.semicolonweb.com/html/canvas/v5/demos/recipes/images/popular/12.png"
+      'image': "assets/sandwich.png",
+      'ingredient': [
+        'assets/meat.png',
+        'assets/broccoli.png',
+        'assets/onion.png',
+        'assets/cabbage.png',
+      ]
     },
   ];
 }
