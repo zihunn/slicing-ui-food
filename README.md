@@ -1,16 +1,21 @@
-# food_ui
+# Slicing ui food from dibbble
 
-A new Flutter project.
+## Setup
 
-## Getting Started
+Run the following commands from your terminal:
 
-This project is a starting point for a Flutter application.
+1) `git clone https://github.com/zihunn/slicing-ui-food.git` to clone this repository 
 
-A few resources to get you started if this is your first Flutter project:
+2) `flutter pub get` in the project root directory to install all the required dependencies.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Screenshots
+
+<table width="100%">
+  <tbody>
+    <tr>
+      <td width="1%"><img src="https://github.com/zihunn/slicing-ui-food/blob/main/assets/ss_home.png"/></td>
+      <td width="1%"><img src="https://github.com/zihunn/slicing-ui-food/blob/main/assets/ss_detail.png"/></td>
+    </tr>
+  </tbody>
+</table>
