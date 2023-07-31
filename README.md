@@ -1,4 +1,4 @@
-# Slicing ui food from dibbble
+# Slicing ui food from dribbble
 
 ## Setup
 
